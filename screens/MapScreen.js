@@ -16,7 +16,7 @@ import { getCompletedLandmarks } from '../HelperJsFiles/completedLandmarks';
 import locations from '../HelperJsonFiles/quests.json';
 import * as Location from 'expo-location'; // Included from file1
 
-const GOOGLE_MAPS_APIKEY = 'AIzaSyAlZW0NrFKmUOazzCx8RUfJqReZ-GB_7xg';
+const GOOGLE_MAPS_APIKEY = 'INSERT-API-KEY-HERE'
 
 export const MAP_SCREEN_ID = "MapScreen";
 
