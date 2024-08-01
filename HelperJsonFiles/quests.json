@@ -1,0 +1,76 @@
+[
+    {
+      "questName": "A Night At the Opera",
+      "questDescription": "Visit the Vienna State Opera.",
+      "districtNum": 1,
+      "latitude": 48.2028,
+      "longitude": 16.3685
+    },
+    {
+      "questName": "A Scent of Roses",
+      "questDescription": "Tour the famous St. Stephen's Cathedral and learn about its history.",
+      "districtNum": 1,
+      "latitude": 48.2081,
+      "longitude": 16.3611
+    },
+    {
+      "questName": "Into The Catacombs",
+      "questDescription": "Tour the catacombs underneath St. Stephen's Cathedral.",
+      "districtNum": 1,
+      "latitude": 48.2085,
+      "longitude": 16.373
+<<<<<<< HEAD
+=======
+    },
+    {
+      "questName": "Ride the Riesenrad",
+      "questDescription": "Enjoy the scenic views along the Danube Canal.",
+      "districtNum": 2,
+      "latitude": 48.2167,
+      "longitude": 16.3959
+    },
+    {
+      "questName": "Mozart's Delight",
+      "questDescription": "Try a Mozartkrugel ball, which can also be found at Vienna’s chocolate museum. (optional)",
+      "districtNum": 2,
+      "latitude": 48.2167,
+      "longitude": 16.4059
+    },
+    {
+      "questName": "River Frontier",
+      "questDescription": "Get a scenic view of the Danube River.",
+      "districtNum": 2,
+      "latitude": 48.2167,
+      "longitude": 16.4159
+    },
+    {
+      "questName": "The Kiss",
+      "questDescription": "Get a photo of the iconic painting, The Kiss in the Belvedere Museum.",
+      "districtNum": 3,
+      "latitude": 48.1915,
+      "longitude": 16.3809
+    },
+    {
+      "questName": "The Two Composers",
+      "questDescription": "Visit the graves of Mozart and Beethoven, located in the same cemetery.",
+      "districtNum": 3,
+      "latitude": 48.1481,
+      "longitude": 16.4417
+    },
+    {
+      "questName": "Karl's Reflection",
+      "questDescription": "Admire the reflection of Karlskirche.",
+      "districtNum": 4,
+      "latitude": 48.1986,
+      "longitude": 16.3717
+    },
+    {
+      "questName": "Karl's Square",
+      "questDescription": "Take a stroll through Karlspatz, a major transporation hub.",
+      "districtNum": 4,
+      "latitude": 48.2002,
+      "longitude": 16.3709
+>>>>>>> 327d7602a09563d206c6eca0715509df3bb71c47
+    }
+
+  ]

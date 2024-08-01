@@ -25,24 +25,26 @@ viennaStorage.async.ensureDatabaseSetup();
 const Tab = createMaterialTopTabNavigator();
 const Stack = createStackNavigator(); // Adding Stack navigation
 
-// New Stack to handle the postcard creation process
-function CameraStack() {
+const CameraStack = createStackNavigator();
+
+function CameraStackScreen() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen 
+    <CameraStack.Navigator>
+      <CameraStack.Screen 
         name="Camera" 
         component={CameraScreen} 
         options={{ 
           headerShown: false,
         }}
       />
-      <Stack.Screen 
+      <CameraStack.Screen 
         name="PhotoConfirmation" 
         component={PhotoConfirmationScreen}
       />
-    </Stack.Navigator>
+    </CameraStack.Navigator>
   );
 }
+
 
 export default function App() {
   const [forceRenderValue, forceRenderFunction] = useState(0);
@@ -63,32 +65,40 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <NavigationContainer>
-        <Tab.Navigator
+        <Stack.Navigator>
+          <Stack.Screen 
+            name="MainTabs" 
+            component={MainTabNavigator} 
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen 
+            name="CameraStack" 
+            component={CameraStackScreen} 
+            options={{ headerShown: false }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </GestureHandlerRootView>
+  );
+
+  function MainTabNavigator(){
+    return (
+      <Tab.Navigator
           screenOptions={{
-            tabBarScrollEnabled: true,
+            //tabBarScrollEnabled: true,
             tabBarShowIcon: true,
             tabBarItemStyle: { justifyContent: 'center', alignItems: 'center' },
             tabBarLabelStyle: { textAlign: 'center', paddingVertical: 5 }, // Add paddingVertical to center the text better
           }}
         >
-          <Tab.Screen name="Home" ref={homeScreenRef} component={HomeScreen} />
+          <Tab.Screen name="Nav" component={Nav} />
           <Tab.Screen name="Map" ref={mapScreenRef} component={MapScreen} />
           <Tab.Screen name="District" ref={districtCompletionScreenRef} component={DistrictCompletionScreen} />
           <Tab.Screen name="City" ref={cityCompletionScreenRef} component={CityCompletionScreen} />
           <Tab.Screen name="Quest" ref={questCompletionScreenRef} component={QuestScreen} />
-          <Tab.Screen name="ProtoTypeMap" component={Nav} />
-          <Tab.Screen name="Camera" // Adds new tab containing the camera 
-          component={CameraStack} 
-          options = 
-          {
-            {
-              tabBarButton: () => null,
-              headerShown: false,
-              tabBarStyle: { display: 'none'}
-            }
-          }/>
+          <Tab.Screen name="Camera" component={CameraStackScreen}/>
         </Tab.Navigator>
-      </NavigationContainer>
-    </GestureHandlerRootView>
-  );
+    )
+  }
 }
+
